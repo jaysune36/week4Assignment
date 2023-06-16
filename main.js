@@ -48,3 +48,13 @@ numStrArrayPush(names);
 
 console.log(nameLengths);
 console.log(averageAge(nameLengths));
+
+function concatItself(word, n) {
+  let str = '';
+  for(let i=0; i <n; i++) {
+    str += word;
+  }
+  return str;
+}
+
+console.log(concatItself('Hello', 3));
