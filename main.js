@@ -37,4 +37,14 @@ function concatStr(arr1) {
 
 console.log(concatStr(names));
 
-let nameLengths = []
+let nameLengths = [];
+
+function numStrArrayPush(arr1) {
+  for(let i=0; i<arr1.length; i++) {
+    nameLengths.push(arr1[i].length)
+  }
+};
+numStrArrayPush(names);
+
+console.log(nameLengths);
+console.log(averageAge(nameLengths));
