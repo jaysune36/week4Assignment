@@ -58,3 +58,7 @@ function concatItself(word, n) {
 }
 
 console.log(concatItself('Hello', 3));
+
+let fullName = (firstName, lastName) => `${firstName} ${lastName}`;
+
+console.log(fullName('John', 'Smith'))
