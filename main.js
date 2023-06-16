@@ -9,7 +9,32 @@ function averageAge(arr1) {
   for(let i=0; i<arr1.length; i++) {
     results += arr1[i];
   }
-  return results / arr1.length
+  return Math.round(results / arr1.length);
 }
 
 console.log(averageAge(ages));
+
+let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
+
+function calulateAvg(arr1) {
+  let sum = 0;
+  for(let i=0; i<arr1.length; i++){
+    let name = arr1[i]
+    sum += name.length;
+  }
+  let average = Math.round(sum / arr1.length);
+  return average;
+}
+console.log(calulateAvg(names));
+
+function concatStr(arr1) {
+  let strOfNames = '';
+  for(let i=0; i<arr1.length; i++){
+    strOfNames += `${arr1[i]} `;
+  }
+  return strOfNames
+}
+
+console.log(concatStr(names));
+
+let nameLengths = []
