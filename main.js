@@ -61,4 +61,9 @@ console.log(concatItself('Hello', 3));
 
 let fullName = (firstName, lastName) => `${firstName} ${lastName}`;
 
-console.log(fullName('John', 'Smith'))
+console.log(fullName('John', 'Smith'));
+
+let sumOfArray = (arr1) => (arr1.reduce((a,b)=> a + b) > 100);
+
+console.log(sumOfArray([20,10,5]));
+console.log(sumOfArray([2,10,65,14,1,23,51]))
