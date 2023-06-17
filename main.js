@@ -97,3 +97,11 @@ console.log(arraysOverUnder(testArrayOne,testArrayTwo)); // false
 console.log(arraysOverUnder(testArrayThree, testArrayFour)) // true
 
 // Question 12
+
+function willBuyDrink(isHotOutsdie, moneyInPocket) {
+  return isHotOutsdie && moneyInPocket > 10.50;
+}
+
+console.log(willBuyDrink(true, 12)); // true
+console.log(willBuyDrink(true, 9)); // false
+console.log(willBuyDrink(false, 15)); // false
