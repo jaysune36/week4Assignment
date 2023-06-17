@@ -65,11 +65,17 @@ let fullName = (firstName, lastName) => `${firstName} ${lastName}`;
 console.log(fullName('John', 'Smith'));
 
 // Question 9
-let sumOfArray = (arr1) => (arr1.reduce((a,b)=> a + b) > 100);
 
-console.log(sumOfArray([20,10,5])); //false
-console.log(sumOfArray([2,10,65,14,1,23,51])); //true
-console.log(sumOfArray([15,15,60,10]));// false
+let testArrayOne = [10,10,10,25]; //sum 55
+let testArrayTwo = [2,10,65,14,1,23,51]; // sum 166
+let testArrayThree = [15,15,60,10]; // sum 100
+let testArrayFour = [20,10,5]; // sum 35
+
+let sumOfArray = (arr1) => arr1.reduce((a,b)=> a + b) > 100;
+
+console.log(sumOfArray(testArrayOne)); //false
+console.log(sumOfArray(testArrayTwo)); //true
+console.log(sumOfArray(testArrayThree));// false
 
 // Question 10
 function averageNumArr(arr1) {
@@ -80,4 +86,14 @@ function averageNumArr(arr1) {
   return average / arr1.length;
 }
 
-console.log(averageNumArr([10,10,10,25]))
+console.log(averageNumArr(testArrayFour));
+
+// Question 11
+function arraysOverUnder(arr1,arr2) {
+  return (arr1.reduce((a,b)=> a + b) > arr2.reduce((a,b)=> a + b));
+}
+
+console.log(arraysOverUnder(testArrayOne,testArrayTwo)); // false
+console.log(arraysOverUnder(testArrayThree, testArrayFour)) // true
+
+// Question 12
