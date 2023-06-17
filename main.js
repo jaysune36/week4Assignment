@@ -30,6 +30,16 @@ let strOfNames = '';
 
 console.log(strOfNames);
 
+// Question 3
+// How do you access the last element of any array?
+// ---- You can access the last element in an array by finding the length of the array and subtracting 1 within a bracket notation. Since array start at 0 when a length is given it will start from 1, this is the reason why you need to subtract 1.
+// ex. array[array.length - 1]
+
+// Question 4
+// How do you access the first element of any array?
+//  ---You can access the first element within in a array simply by putting a 0 within the brackets of an array list. Since array start at 0 this will always give you the first element within the array.
+// ex. array[0]
+
 // Question 5
 let nameLengths = [];
 
@@ -105,3 +115,6 @@ function willBuyDrink(isHotOutsdie, moneyInPocket) {
 console.log(willBuyDrink(true, 12)); // true
 console.log(willBuyDrink(true, 9)); // false
 console.log(willBuyDrink(false, 15)); // false
+
+// Question 13
+
