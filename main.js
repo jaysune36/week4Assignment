@@ -1,54 +1,54 @@
+// Question 1a
 let ages = [3,9,23,64,2,8,28,93];
-let valueArrItems = (arr1, arr2) => arr1 - arr2;
-console.log(valueArrItems(ages[0], ages[ages.length - 1]));
+console.log(ages[0] - ages[ages.length - 1]);
+// 1b
 ages.push(9);
-console.log(valueArrItems(ages[0], ages[ages.length - 1]));
-
-function averageAge(arr1) {
-  let results = 0;
-  for(let i=0; i<arr1.length; i++) {
-    results += arr1[i];
-  }
-  return Math.round(results / arr1.length);
+console.log(ages[0] - ages[ages.length - 1]);
+// 1c
+let ageAverage = 0;
+for(let i=0; i<ages.length; i++) {
+  ageAverage += ages[i];
 }
 
-console.log(averageAge(ages));
+console.log(Math.round(ageAverage/ages.length));
 
+// Question 2a
 let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
+let averageNameValue = 0;
 
-function calulateAvg(arr1) {
-  let sum = 0;
-  for(let i=0; i<arr1.length; i++){
-    let name = arr1[i]
-    sum += name.length;
+  for(let i=0; i<names.length; i++){
+    averageNameValue += names[i].length;
   }
-  let average = Math.round(sum / arr1.length);
-  return average;
-}
-console.log(calulateAvg(names));
 
-function concatStr(arr1) {
-  let strOfNames = '';
-  for(let i=0; i<arr1.length; i++){
-    strOfNames += `${arr1[i]} `;
+console.log(Math.round(averageNameValue / names.length));
+
+// 2b
+let strOfNames = '';
+  for(let i=0; i<names.length; i++){
+    strOfNames += `${names[i]} `;
   }
-  return strOfNames
-}
 
-console.log(concatStr(names));
+console.log(strOfNames);
 
+// Question 5
 let nameLengths = [];
 
-function numStrArrayPush(arr1) {
-  for(let i=0; i<arr1.length; i++) {
-    nameLengths.push(arr1[i].length)
+  for(let i=0; i<names.length; i++) {
+    nameLengths.push(names[i].length)
   }
-};
-numStrArrayPush(names);
 
 console.log(nameLengths);
-console.log(averageAge(nameLengths));
 
+// Question 6
+let sum = 0;
+
+for(let i=0; i<nameLengths.length; i++) {
+  sum += nameLengths[i];
+}
+
+console.log(sum);
+
+// Question 7
 function concatItself(word, n) {
   let str = '';
   for(let i=0; i <n; i++) {
@@ -59,11 +59,25 @@ function concatItself(word, n) {
 
 console.log(concatItself('Hello', 3));
 
+// Quetion 8
 let fullName = (firstName, lastName) => `${firstName} ${lastName}`;
 
 console.log(fullName('John', 'Smith'));
 
+// Question 9
 let sumOfArray = (arr1) => (arr1.reduce((a,b)=> a + b) > 100);
 
-console.log(sumOfArray([20,10,5]));
-console.log(sumOfArray([2,10,65,14,1,23,51]))
+console.log(sumOfArray([20,10,5])); //false
+console.log(sumOfArray([2,10,65,14,1,23,51])); //true
+console.log(sumOfArray([15,15,60,10]));// false
+
+// Question 10
+function averageNumArr(arr1) {
+  let average = 0;
+  for(let i=0; i<arr1.length; i++) {
+    average += arr1[i];
+  }
+  return average / arr1.length;
+}
+
+console.log(averageNumArr([10,10,10,25]))
